@@ -1,8 +1,9 @@
 export default function Profile() {
   return (
-    <section>
-      <h1 className="text-2xl font-semibold">Profile</h1>
-      <p className="mt-2">Brief intro about you.</p>
+    <section className="flex items-center justify-center min-h-screen bg-gray-900">
+      <h1 className="text-5xl font-bold text-pink-500">
+        Tailwind is working! 🎉
+      </h1>
     </section>
   );
 }
