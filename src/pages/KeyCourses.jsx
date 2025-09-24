@@ -1,3 +1,5 @@
+import ringo from "../assets/ringo.jpeg";
+
 export default function KeyCourses() {
   return (
     <section>

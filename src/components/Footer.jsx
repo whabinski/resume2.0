@@ -5,32 +5,32 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#2E3047] text-white">
-      <div className="mx-auto max-w-6xl px-2 sm:px-4">
+    <footer className="bg-[#2D3250] text-white border-t-4 border-[#7077A1] -mt-px">
+      <div className="mx-auto max-w-6xl px-2 sm:px-6">
         <div
           className="
-            flex flex-nowrap items-center justify-center
+            flex flex-wrap sm:flex-nowrap items-center justify-center
             min-w-0
-            gap-[0.75em] sm:gap-[2em]
-            py-[0.6em]
-            text-[clamp(0.55rem,1.8vw,0.95rem)]
+            gap-2 sm:gap-[4em]
+            py-[0.8em]
+            text-[clamp(0.5rem,3.2vw,0.9rem)]
             leading-none
           "
         >
-          {/* Copyright (allow shrinking; keep on one line) */}
-          <p className="text-[#E6B676] whitespace-nowrap">
+          {/* Copyright (no wrap) */}
+          <p className="text-[#F6B17A] whitespace-nowrap shrink-0">
             © {year} Wyatt Habinski
           </p>
 
-          {/* Icons – size in em so they follow container font-size */}
+          {/* Icons – smaller on tiny screens, scale up on sm+ */}
           <a
             href="https://linkedin.com/in/wyatt-habinski"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-[#E6B676] hover:text-white transition"
+            className="text-[#F6B17A] hover:text-white transition shrink-0"
           >
-            <FaLinkedin className="align-middle text-[2em]" />
+            <FaLinkedin className="align-middle text-[1.6em] sm:text-[2.5em]" />
           </a>
 
           <a
@@ -38,26 +38,29 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-[#E6B676] hover:text-white transition"
+            className="text-[#F6B17A] hover:text-white transition shrink-0"
           >
-            <FaGithub className="align-middle text-[2em]" />
+            <FaGithub className="align-middle text-[1.6em] sm:text-[2.5em]" />
           </a>
 
-          {/* Button – padding in em so it scales with text */}
+          {/* Button */}
           <a
             href={resumePDF}
             download
             className="
               inline-flex items-center justify-center
-              rounded border border-[#E6B676]
-              px-[1.1em] py-[0.55em]
-              font-semibold text-[#E6B676]
-              hover:bg-[#E6B676] hover:text-[#2E3047]
+              rounded border border-[#F6B17A]
+              px-[0.7em] sm:px-[1.1em] py-[0.55em]
+              font-semibold text-[#F6B17A]
+              hover:bg-[#F6B17A] hover:text-[#2E3047]
               transition
-              whitespace-nowrap
+              min-w-0 truncate
             "
+            title="Download My Resume"
           >
-            Download My Resume
+            {/* Short label on small screens, full label on sm+ */}
+            <span className="sm:hidden">Resume</span>
+            <span className="hidden sm:inline">Download My Resume</span>
           </a>
         </div>
       </div>

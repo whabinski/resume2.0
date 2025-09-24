@@ -1,71 +1,50 @@
 import city from "../assets/city.jpeg";
-import profilePic from "../assets/profilePic.jpeg";
+import profilePic from "../assets/profilePicOrigional.jpeg";
 import ringo from "../assets/ringo.jpeg";
-
-
+import SideBySideSection from "../components/SideBySideSection";
 
 export default function Profile() {
   return (
     <div className="relative">
-      {/* Hero background */}
+      {/* Full background */}
       <div
-        className="min-h-screen bg-cover bg-center"
+        className="fixed inset-0 -z-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${city})` }}
       />
 
-      {/* Overlapping content */}
-      <section className="mx-auto max-w-6xl px-4">
-        {/* top row: headshot card + about card */}
-        <div className="-mt-40 grid grid-cols-1 md:grid-cols-[320px_minmax(0,1fr)] gap-6 items-start">
-          {/* headshot */}
-          <div className="justify-self-center md:justify-self-start">
-            <div className="rounded-lg bg-[#393C57] p-3 shadow-xl ring-1 ring-black/50">
-              <img
-                src={profilePic}
-                alt="Wyatt Habinski"
-                className="h-[280px] w-[280px] rounded-md object-cover"
-              />
-            </div>
-          </div>
+      <section className="mx-auto max-w-6xl px-4  space-y-6 md:space-y-0">
+        {/* Headshot + About */}
+        <SideBySideSection imgSrc={profilePic} imgAlt="Wyatt Habinski">
+          <p className="text-sm leading-6">
+           Over 6 years of experience designing, developing, and deploying scalable applications. 
+           Proficient in working with diverse programming languages across various paradigms. 
+           Skilled in collaborating within dynamic teams to deliver innovative 
+           solutions and committed to driving measurable business impact.
+          </p>
+          <p className="mt-4 text-sm leading-6">
+            My approach to challenges is fueled by strong ambition, which is a constant motivator 
+            to deliver high-quality work, and seek opportunities for personal and professional growth.
+          </p>
+        </SideBySideSection>
 
-          {/* about box */}
-          <div className="rounded-lg bg-[#2E3047] text-gray-200 p-6 shadow-xl ring-1 ring-black/60">
-            <p className="text-sm leading-6">
-              Over 6 years of experience designing, developing, and deploying scalable
-              applications. Proficient in diverse programming languages and paradigms. Skilled at
-              collaborating within dynamic teams to deliver innovative solutions and measurable impact.
+        {/* Contact + Dog (reverse order) */}
+        <SideBySideSection imgSrc={ringo} imgAlt="Sunset with dog" reverse imgW={420} imgH={280}>
+          <h2 className="text-2xl font-bold">Contact Me!</h2>
+          <div className="mt-4 space-y-2 text-sm text-gray-200">
+            <p>
+              <span className="font-semibold">Email:</span>{" "}
+              <a
+                href="mailto:whabinski@hotmail.com"
+                className="decoration-[#E6B676] hover:text-[#E6B676]"
+              >
+                whabinski@hotmail.com
+              </a>
             </p>
-            <p className="mt-4 text-sm leading-6">
-              Ambitious and outcome-driven; committed to high-quality work and ongoing growth.
+            <p>
+              <span className="font-semibold">Phone:</span> 289-696-8507
             </p>
           </div>
-        </div>
-
-        {/* bottom row: contact card + image card */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_420px] gap-6 items-start">
-          {/* contact */}
-          <div className="rounded-lg bg-[#2E3047] text-white p-6 shadow-xl ring-1 ring-black/60">
-            <h2 className="text-2xl font-bold text-white">Contact Me!</h2>
-            <div className="mt-4 space-y-2 text-sm text-gray-200">
-              <p><span className="font-semibold">Email:</span> whabinski@hotmail.com</p>
-              <p><span className="font-semibold">Phone:</span> 289-696-8507</p>
-            </div>
-          </div>
-
-          {/* dog image */}
-          <div className="justify-self-center md:justify-self-end">
-            <div className="rounded-lg bg-[#393C57] p-3 shadow-xl ring-1 ring-black/50">
-              <img
-                src={ringo}
-                alt="Sunset"
-                className="h-[260px] w-[420px] rounded-md object-cover"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* spacer to clear hero edge */}
-        <div className="h-10" />
+        </SideBySideSection>
       </section>
     </div>
   );
