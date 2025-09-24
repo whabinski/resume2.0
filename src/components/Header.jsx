@@ -54,7 +54,7 @@ export default function Header() {
         </div>
 
         {/* Desktop layout (≥640px) */}
-        <div className="hidden sm:grid grid-cols-2 h-20 lg:h-28">
+        <div className="hidden sm:grid grid-cols-2 h-28">
           {/* Left: name + subtitle */}
           <div className="justify-self-start h-full flex flex-col justify-center">
             <h1 className="font-extrabold text-[#F6B17A] leading-none text-[clamp(1.1rem,2.5vw,2rem)] mb-2">
@@ -69,7 +69,7 @@ export default function Header() {
           <nav
             className="justify-self-end h-full flex items-center
                        gap-[clamp(0.5rem,1vw,1rem)]
-                       text-[clamp(0.6rem,1.1vw,1.1rem)]"
+                       text-[clamp(0.6rem,1.1vw,1rem)]"
           >
             <NavLink to="/" className={link}>Profile</NavLink>
             <NavLink to="/experience" className={link}>Experience</NavLink>

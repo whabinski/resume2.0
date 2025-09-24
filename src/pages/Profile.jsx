@@ -12,7 +12,7 @@ export default function Profile() {
         style={{ backgroundImage: `url(${city})` }}
       />
 
-      <section className="mx-auto max-w-6xl px-4  space-y-6 md:space-y-0">
+      <section className="mx-auto max-w-6xl px-4 space-y-6 md:space-y-0">
         {/* Headshot + About */}
         <SideBySideSection imgSrc={profilePic} imgAlt="Wyatt Habinski">
           <p className="text-sm leading-6">
