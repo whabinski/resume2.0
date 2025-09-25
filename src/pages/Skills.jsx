@@ -1,8 +1,13 @@
+import puzzle from "../assets/puzzle.jpeg";
+
 export default function Skills() {
   return (
-    <section>
-      <h1 className="text-2xl font-semibold">Skills</h1>
-      <p className="mt-2">Brief intro about you.</p>
-    </section>
+      <div className="relative">
+        {/* Full background */}
+        <div
+          className="fixed inset-0 -z-10 bg-cover bg-center"
+          style={{ backgroundImage: `url(${puzzle})` }}
+        />
+      </div>
   );
 }

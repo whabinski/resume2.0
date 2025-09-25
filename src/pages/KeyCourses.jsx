@@ -1,10 +1,13 @@
-import ringo from "../assets/ringo.jpeg";
+import books from "../assets/books.jpeg";
 
 export default function KeyCourses() {
   return (
-    <section>
-      <h1 className="text-2xl font-semibold">KeyCourses</h1>
-      <p className="mt-2">Brief intro about you.</p>
-    </section>
+      <div className="relative">
+        {/* Full background */}
+        <div
+          className="fixed inset-0 -z-10 bg-cover bg-center"
+          style={{ backgroundImage: `url(${books})` }}
+        />
+      </div>
   );
 }
