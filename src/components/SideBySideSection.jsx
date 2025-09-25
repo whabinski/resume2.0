@@ -64,12 +64,15 @@ export default function SideBySideSection({
       <div
         className={cx(
           "bg-[#424769] text-gray-100 p-6 ring-2 ring-black shadow-2xl",
+          "[&_*]:text-[clamp(0.7rem,0.7vw,0.8rem)] sm:[&_*]:text-[clamp(0.8rem,0.8vw,0.9rem)]",
           contentClassName
         )}
         style={minTextHeight ? { minHeight: minTextHeight } : undefined}
       >
         {children}
       </div>
+
+
     </div>
   );
 }

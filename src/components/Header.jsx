@@ -69,7 +69,7 @@ export default function Header() {
           <nav
             className="justify-self-end h-full flex items-center
                        gap-[clamp(0.5rem,1vw,1rem)]
-                       text-[clamp(0.6rem,1.1vw,1rem)]"
+                       text-[clamp(0.7rem,1.1vw,1rem)]"
           >
             <NavLink to="/" className={link}>Profile</NavLink>
             <NavLink to="/experience" className={link}>Experience</NavLink>
