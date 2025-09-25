@@ -16,7 +16,7 @@ export default function Education() {
         <SideBySideSection
           imgSrc={mcmaster}
           imgAlt="McMaster University"
-          contentClassName="w-[clamp(18rem,40vw,36rem)]"
+          contentClassName=""
         >
         <h2 className="text-xl font-bold text-[#F6B17A] mb-2">
           B.A.Sc Honours Computer Science
