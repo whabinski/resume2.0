@@ -24,6 +24,7 @@ export default function Education() {
         <p className="text-sm leading-6 text-gray-200">
           <span className="font-semibold">Minor:</span> Business <br />
           <span className="font-semibold">GPA:</span> 3.9 <br />
+          <span className="font-semibold">Acolades:</span> Dean's Honours List, Graduated With Distinction <br />
           <span className="font-semibold">University:</span> McMaster University, Hamilton, ON <br />
           <span className="font-semibold">Graduated:</span> 2025
         </p>

@@ -1,66 +1,130 @@
 import desk from "../assets/desk.jpeg";
-import Section from "../components/Section";
-import Card from "../components/Card";
-import Badge from "../components/Badge";
-
-const jobs = [
-  {
-    role: "Frontend Developer",
-    company: "Company A",
-    location: "Remote",
-    dates: "2023 – Present",
-    bullets: [
-      "Built a reusable React/Tailwind component library.",
-      "Improved Lighthouse performance 68 → 95.",
-      "Collaborated with design to meet WCAG AA."
-    ],
-    tech: ["React", "Vite", "Tailwind", "TypeScript"]
-  },
-  {
-    role: "Software Developer Intern",
-    company: "Company B",
-    location: "Toronto, ON",
-    dates: "2022 – 2023",
-    bullets: [
-      "Implemented auth flows and protected routes.",
-      "Reduced regressions with integration tests."
-    ],
-    tech: ["React", "Node", "Jest"]
-  }
-];
+import JobAccordion from "../components/JobAccordion";
 
 export default function Experience() {
   return (
     <div className="relative">
-      {/* Full background */}
+      {/* Background */}
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${desk})` }}
       />
 
-      <Section title="Experience">
-        <div className="space-y-4">
-          {jobs.map((j, idx) => (
-            <Card key={idx}>
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                <div>
-                  <h2 className="text-lg font-semibold">{j.role} · {j.company}</h2>
-                  <p className="text-sm text-gray-600">{j.location}</p>
-                </div>
-                <div className="text-sm text-gray-500">{j.dates}</div>
-              </div>
+      {/* Page content */}
+      <div className="mx-auto max-w-6xl px-4 py-8 md:py-0 min-h-0 md:min-h-[calc(100svh-18rem)] flex flex-col gap-6 md:justify-center">
+        {/* ===== Job 1 ===== */}
+        <JobAccordion
+          company="HomeEquity Bank"
+          role="Programming Analyst"
+          roleNote="Toronto, ON"
+          defaultOpen={false}
+          tech={[
+            "Salesforce", "SaaS", "Cloud Computing",
+            ".NET", "C#", "Apex", "Entity Framework",
+            "SQL Server", "Vue.js", "Telerik UI",
+            "Swagger", "Azure DevOps" 
+          ]}
+        >
+          {/* General summary */}
+          <ul className="list-disc pl-5 space-y-1.5">
+            <li>
+              Collaborated within an Agile sprint development environment, ensuring efficient and
+              seamless integration of new features.
+            </li>
+            <li>
+              Worked in a versatile team environment across sub-teams and cross-functional groups throughout the business.
+            </li>
+          </ul>
 
-              <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-                {j.bullets.map((b, i) => <li key={i}>{b}</li>)}
-              </ul>
+          {/* 2022 */}
+          <div className="mt-3 rounded-md bg-black/20 p-3 ring-1 ring-black/50">
+            <h3 className="font-semibold mb-2">
+            Salesforce Development (SaaS)
+            </h3>
+            <ul className="list-disc pl-5 space-y-1.5">
+              <li>
+                Built an algorithm to redact personal identification information for inactive clients and a batch process to auto-identify
+                and redact qualifying accounts in Salesforce.
+              </li>
+              <li>Contributed to sprint delivery via debugging, fixes, and refactors.</li>
+            </ul>
+          </div>
 
-              <div className="mt-3 flex flex-wrap gap-2">
-                {j.tech.map(t => <Badge key={t}>{t}</Badge>)}
-              </div>
-            </Card>
-          ))}
-        </div>
-      </Section>
+          {/* 2023 */}
+          <div className="mt-3 rounded-md bg-black/20 p-3 ring-1 ring-black/50">
+            <h3 className="font-semibold mb-2">
+             Time-Tracking Web App
+            </h3>
+            <ul className="list-disc pl-5 space-y-1.5">
+              <li>
+                Led a 4-month project to build a time-tracking web app, transforming an existing DB
+                into a full app.
+              </li>
+              <li>
+                Stack: VS 2022, SQL Server, Swagger, Entity Framework, Vue.js, Telerik UI.
+              </li>
+              <li>
+                Ensured testing across environments and deployed via Azure DevOps; managed change requests.
+              </li>
+            </ul>
+            {/* Optional image */}
+            {/* <img src={timeTrackingImg} alt="Time tracking UI" className="mt-3 rounded ring-1 ring-black/40" /> */}
+          </div>
+
+          {/* 2024 */}
+          <div className="mt-3 rounded-md bg-black/20 p-3 ring-1 ring-black/50">
+            <h3 className="font-semibold mb-2">
+              .NET Developer
+            </h3>
+            <ul className="list-disc pl-5 space-y-1.5">
+              <li>Maintained and improved .NET apps, boosting performance and UX.</li>
+              <li>Used Azure DevOps for work management, CI/CD and deployments.</li>
+              <li>Designed, implemented and tested features with cross-functional teams.</li>
+              <li>Independently debugged and optimized code following best practices for software development and version control.</li>
+            </ul>
+          </div>
+        </JobAccordion>
+
+        {/* ===== Job 2 ===== */}
+        <JobAccordion
+          company="Building Science Investigations"
+          role="Contract Automation Developer"
+          roleNote=" Niagara, ON"
+          defaultOpen={false}
+          tech={["Python", "Pandas", "Openpyxl", "python-docx", "PyQt5"]}
+        >
+          <div className="mt-3 rounded-md bg-black/20 p-3 ring-1 ring-black/50">
+            <ul className="list-disc pl-5 space-y-1.5">
+              <li>
+                Designed and implemented an automated reporting tool to process Excel input data and
+                generate professional deliverables, including:
+                <ul className="list-[circle] pl-6 mt-1 space-y-1">
+                  <li>1 Excel summary report</li>
+                  <li>2 Word documents with customized layouts and branding</li>
+                </ul>
+              </li>
+
+              <li>
+                Utilized <span className="italic">pandas</span>,{" "}
+                <span className="italic">openpyxl</span>, and{" "}
+                <span className="italic">python-docx</span> to streamline data extraction,
+                transformation, and formatting.
+              </li>
+
+              <li>
+                Developed a user-friendly GUI with <span className="italic">PyQt5</span>,
+                enabling file uploads and customizable reports.
+              </li>
+
+              <li>
+                Automated repetitive tasks, cutting manual reporting time and improving accuracy
+                and consistency.
+              </li>
+            </ul>
+          </div>
+        </JobAccordion>
+
+      </div>
     </div>
   );
 }
