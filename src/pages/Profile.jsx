@@ -12,14 +12,21 @@ export default function Profile() {
         style={{ backgroundImage: `url(${city})` }}
       />
 
-      <section className="mx-auto max-w-6xl px-4 space-y-6 md:space-y-0">
+      {/* Content container */}
+      <section
+        className="
+          mx-auto max-w-6xl px-4
+          md:min-h-[calc(100svh-18rem)] md:flex md:flex-col md:justify-center
+          py-8 md:py-0 space-y-4
+        "
+      >
         {/* Headshot + About */}
         <SideBySideSection imgSrc={profilePic} imgAlt="Wyatt Habinski">
           <p className="text-sm leading-6">
-           Over 6 years of experience designing, developing, and deploying scalable applications. 
-           Proficient in working with diverse programming languages across various paradigms. 
-           Skilled in collaborating within dynamic teams to deliver innovative 
-           solutions and committed to driving measurable business impact.
+            Over 6 years of experience designing, developing, and deploying scalable applications. 
+            Proficient in working with diverse programming languages across various paradigms. 
+            Skilled in collaborating within dynamic teams to deliver innovative 
+            solutions and committed to driving measurable business impact.
           </p>
           <p className="mt-4 text-sm leading-6">
             My approach to challenges is fueled by strong ambition, which is a constant motivator 

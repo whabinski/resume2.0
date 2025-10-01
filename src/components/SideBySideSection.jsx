@@ -31,7 +31,7 @@ export default function SideBySideSection({
   return (
     <div
       className={cx(
-        "grid grid-cols-1 items-center gap-6 md:gap-5",
+        "grid grid-cols-1 items-center gap-6 md:gap-6",
         reverse ? "md:grid-cols-[minmax(0,1fr)_auto]" : "md:grid-cols-[auto_minmax(0,1fr)]",
         className
       )}
