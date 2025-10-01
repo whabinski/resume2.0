@@ -68,7 +68,7 @@ Please change the parent <Route path="${G}"> to <Route path="${G==="/"?"*":`${G}
             py-[0.8em]\r
             text-[clamp(0.5rem,3.2vw,0.9rem)]\r
             leading-none\r
-          `,children:[d.jsxs("p",{className:"text-[#F6B17A] whitespace-nowrap shrink-0",children:["© ",i," Wyatt Habinski"]}),d.jsx("a",{href:"https://linkedin.com/in/wyatt-habinski",target:"_blank",rel:"noopener noreferrer","aria-label":"LinkedIn",className:"text-[#F6B17A] hover:text-white transition shrink-0",children:d.jsx(q0,{className:"align-middle text-[1.6em] sm:text-[2.5em]"})}),d.jsx("a",{href:"https://github.com/whabinski",target:"_blank",rel:"noopener noreferrer","aria-label":"GitHub",className:"text-[#F6B17A] hover:text-white transition shrink-0",children:d.jsx(w0,{className:"align-middle text-[1.6em] sm:text-[2.5em]"})}),d.jsxs("a",{href:Y0,download:!0,className:`\r
+          `,children:[d.jsxs("p",{className:"text-[#F6B17A] whitespace-nowrap shrink-0",children:["© ",i," Wyatt Habinski"]}),d.jsx("a",{href:"https://linkedin.com/in/wyatt-habinski",target:"_blank",rel:"noopener noreferrer","aria-label":"LinkedIn",className:"text-[#F6B17A] hover:text-white transition shrink-0",children:d.jsx(q0,{className:"align-middle text-[1.6em] sm:text-[2.5em]"})}),d.jsx("a",{href:"https://github.com/whabinski",target:"_blank",rel:"noopener noreferrer","aria-label":"GitHub",className:"text-[#F6B17A] hover:text-white transition shrink-0",children:d.jsx(w0,{className:"align-middle text-[1.6em] sm:text-[2.5em]"})}),d.jsxs("a",{href:Y0,download:"Wyatt Habinski - Resume.pdf",className:`\r
               inline-flex items-center justify-center\r
               rounded border border-[#F6B17A]\r
               px-[0.7em] sm:px-[1.1em] py-[0.55em]\r
