@@ -23,7 +23,7 @@ export default function Profile() {
         {/* Headshot + About */}
         <SideBySideSection imgSrc={profilePic} imgAlt="Wyatt Habinski">
           <p className="text-sm leading-6">
-            Test Over 6 years of experience designing, developing, and deploying scalable applications. 
+            Over 6 years of experience designing, developing, and deploying scalable applications. 
             Proficient in working with diverse programming languages across various paradigms. 
             Skilled in collaborating within dynamic teams to deliver innovative 
             solutions and committed to driving measurable business impact.
