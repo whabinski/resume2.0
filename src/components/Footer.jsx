@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Button */}
           <a
             href={resumePDF}
-            download
+            download="Wyatt Habinski - Resume.pdf"
             className="
               inline-flex items-center justify-center
               rounded border border-[#F6B17A]
