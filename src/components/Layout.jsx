@@ -4,21 +4,31 @@ import { Outlet } from "react-router-dom";
 
 export default function Layout() {
   return (
-    <div className="h-screen flex flex-col">
-      {/* Header (fixed in layout) */}
-      <div className="flex-none shadow-sm">
+    <div className="relative min-h-screen bg-transparent">
+      {/* Fixed Header */}
+      <div className="fixed top-0 left-0 right-0 z-50">
         <Header />
       </div>
 
-      {/* Only this region scrolls */}
-      <main className="flex-auto overflow-y-auto">
+      {/* Spacer to offset the fixed header height */}
+      {/* Match Header heights: h-20 (80px) on small, lg:h-28 (112px) on lg+ */}
+      <div aria-hidden className="h-20 lg:h-28" />
+
+      {/* Scrollable content area with explicit height */}
+      {/* Height = 100vh - header - footer */}
+      <main className="overflow-y-auto 
+                       h-[calc(100vh-80px-64px)] 
+                       lg:h-[calc(100vh-112px-64px)]">
         <div className="mx-auto max-w-6xl px-4 py-8">
           <Outlet />
         </div>
       </main>
 
-      {/* Footer (fixed in layout) */}
-      <div className="flex-none border-t">
+      {/* Spacer to offset the fixed footer height */}
+      <div aria-hidden className="h-16" />
+
+      {/* Fixed Footer */}
+      <div className="fixed bottom-0 left-0 right-0 z-50">
         <Footer />
       </div>
     </div>
