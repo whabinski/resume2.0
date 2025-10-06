@@ -27,6 +27,7 @@ export default function Skills() {
           <SkillBox title="Data Science Tools" subtitle="Pandas, NumPy, openpyxl" type="technical" />
           <SkillBox title="Networking" subtitle="TCP/IP, HTTP, Wireshark" type="technical" />
           <SkillBox title="Version Control" subtitle="Git, GitHub" type="technical" />
+          <SkillBox title="Automation Tools" subtitle="n8n, JUnit" type="technical" />
 
           <SkillBox title="Problem Solving & Debugging" type="soft" />
           <SkillBox title="Analytical Thinking" type="soft" />
