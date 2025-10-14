@@ -23,14 +23,14 @@ export default function Profile() {
         {/* Headshot + About */}
         <SideBySideSection imgSrc={profilePic} imgAlt="Wyatt Habinski">
           <p className="text-sm leading-6">
-            Over 6 years of experience designing, developing, and deploying scalable applications. 
-            Proficient in working with diverse programming languages across various paradigms. 
-            Skilled in collaborating within dynamic teams to deliver innovative 
-            solutions and committed to driving measurable business impact.
+            Experienced in designing, developing, testing, and deploying scalable applications, 
+            with hands on exposure to AI and automation tools. Proficient across multiple programming 
+            paradigms and diverse languages. Skilled in collaborating within dynamic teams to deliver
+            innovative, high-quality solutions, and committed to driving measurable business impact.
           </p>
           <p className="mt-4 text-sm leading-6">
-            My approach to challenges is fueled by strong ambition, which is a constant motivator 
-            to deliver high-quality work, and seek opportunities for personal and professional growth.
+            I approach challenges with a strong desire to deliver high quality work, and
+            am continuously motivated to seek opportunities for personal and professional growth.
           </p>
         </SideBySideSection>
 
