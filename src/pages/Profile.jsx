@@ -1,5 +1,5 @@
 import city from "../assets/city.jpeg";
-import profilePic from "../assets/profilePicOrigional.jpeg";
+import profilePic from "../assets/profilePic.jpeg";
 import ringo from "../assets/ringo.jpeg";
 import SideBySideSection from "../components/SideBySideSection";
 
