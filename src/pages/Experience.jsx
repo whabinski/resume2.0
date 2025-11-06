@@ -124,6 +124,58 @@ export default function Experience() {
           </div>
         </JobAccordion>
 
+        {/* ===== Job 3 ===== */}
+        <JobAccordion
+          company="Data Annotation"
+          role="Freelance AI Code Model Trainer"
+          roleNote="Remote"
+          defaultOpen={false}
+          tech={[
+            "Python", "JavaScript", "C++", "C#", "SQL", "JSON", "Prompt Engineering", "AI Evaluation"
+          ]}
+        >
+          <div className="mt-3 rounded-md bg-black/20 p-3 ring-1 ring-black/50">
+            <ul className="list-disc pl-5 space-y-1.5">
+              <li>
+                Independently completed AI training tasks focused on improving
+                large language models through code generation, correction, and evaluation.
+              </li>
+
+              <li>
+                Created detailed programming prompts and corresponding correct solutions to teach models
+                proper syntax, logic, and implementation techniques across multiple programming languages.
+              </li>
+
+              <li>
+                Compared multiple AI-generated code outputs to determine which solution best met the
+                specified requirements for correctness, efficiency, and clarity.
+              </li>
+
+              <li>
+                Debugged and corrected partially functional model-generated code to ensure
+                it compiled and executed as intended.
+              </li>
+
+              <li>
+                Analyzed model reasoning to identify where its logic diverged from the
+                intended problem-solving path (“wrong turns”) and documented those cases
+                for refinement and retraining.
+              </li>
+
+              <li>
+                Tasks spanned several programming languages including{" "}
+                <span className="italic">Python</span>,{" "}
+                <span className="italic">JavaScript</span>,{" "}
+                <span className="italic">C++</span>,{" "}
+                and <span className="italic">C#</span>.
+              </li>
+            </ul>
+          </div>
+        </JobAccordion>
+
+
+
+
       </div>
     </div>
   );
