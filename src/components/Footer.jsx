@@ -1,5 +1,5 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import resumePDF from "../assets/Resume.pdf";
+import resumePDF from "../assets/Wyatt_Habinski_Resume.pdf";
 
 export default function Footer() {
   const year = new Date().getFullYear();

@@ -127,7 +127,7 @@ export default function Experience() {
         {/* ===== Job 3 ===== */}
         <JobAccordion
           company="Data Annotation"
-          role="Freelance AI Code Model Trainer"
+          role="Freelance Software Developer - AI Model Trainer"
           roleNote="Remote"
           defaultOpen={false}
           tech={[
