@@ -5,6 +5,7 @@ import Experience from "./pages/Experience";
 import Education from "./pages/Education";
 import KeyCourses from "./pages/KeyCourses";
 import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/" element={<Profile />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/education" element={<Education />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/courses" element={<KeyCourses />} />
         <Route path="/skills" element={<Skills />} />
       </Route>

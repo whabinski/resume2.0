@@ -1,12 +1,31 @@
-# React + Vite
+# Resume Portfolio Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains my personal resume and portfolio website, hosted at **[wyatthabinski.com](https://wyatthabinski.com/)**.  
+It’s designed as an interactive version of my resume, showcasing my experience, education, and fun projects!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+The site is structured as a set of sections you can navigate via the header:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Profile** – Short summary of who I am and what I do.
+- **Experience** – Detailed breakdown of roles, responsibilities, and tech used.
+- **Projects** – Deeper dives into highlight projects (DoodleAI, Beatify, DieSpy, etc.).
+- **Education** – Academic background and relevant programs.
+- **Key Courses** – Selected coursework that supports my technical skill set.
+- **Relevant Skills** – Technical, tooling, and domain skills.
+
+---
+
+## Tech Stack
+
+- **Language:** JavaScript  
+- **Frontend:** React  
+- **Routing:** React Router  
+- **Styling:** Tailwind CSS  
+- **Hosting:** GitHub Pages  
+- **CI/CD:** GitHub Actions
+
+---
+
