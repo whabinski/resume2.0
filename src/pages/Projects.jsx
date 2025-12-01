@@ -106,6 +106,7 @@ const PROJECTS = [
   {
     title: "Resume Portfolio Site",
     context: "Personal Project",
+    layout: "side",
     tech: [
       "JavaScript",
       "React",
@@ -128,7 +129,7 @@ const PROJECTS = [
   // 5. Rari Racing
   {
     title: "Rari Racing – Elm Math Game",
-    context: "First-Year User-Centred Design Project",
+    context: "School Project",
     tech: [
       "Elm",
       "Functional Programming",

@@ -3,22 +3,60 @@ import Badge from "./Badge";
 
 export default function ProjectCard({
   title,
-  context,               // e.g. "Personal Project · 2025"
-  imageSrc,              // screenshot / thumbnail
+  context,
+  imageSrc,
   imageAlt = "",
-  videoSrc,              // mp4 demo
+  videoSrc,
   description,
   bullets = [],
   tech = [],
   liveLink,
-  liveLabel = "Live Site",   // 🔹 NEW: customizable label
+  liveLabel = "Live Site",
   repoLink,
+  // NEW: choose layout; "bottom" = original; "side" = media left, text right
+  layout = "bottom",
 }) {
   const hasImage = Boolean(imageSrc);
   const hasVideo = Boolean(videoSrc);
   const hasMedia = hasImage || hasVideo;
 
   const techList = Array.isArray(tech) ? tech : tech ? [tech] : [];
+
+  const textPanel = (
+    <div className="rounded-md bg-black/20 p-3 ring-1 ring-black/50 [&_*]:text-[clamp(0.75rem,0.9vw,0.9rem)]">
+      {description && <p className="mb-2 text-gray-100">{description}</p>}
+
+      {Array.isArray(bullets) && bullets.length > 0 && (
+        <ul className="list-disc pl-5 space-y-1.5 text-gray-100">
+          {bullets.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+
+  const imageBlock =
+    hasImage && (
+      <div className="rounded-md bg-black/25 p-2 ring-1 ring-black/60 flex justify-center">
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          className="max-h-64 max-w-full w-auto object-contain rounded"
+        />
+      </div>
+    );
+
+  const videoBlock =
+    hasVideo && (
+      <div className="rounded-md bg-black/25 p-2 ring-1 ring-black/60 flex justify-center">
+        <video
+          src={videoSrc}
+          controls
+          className="max-h-64 max-w-full w-auto object-contain rounded"
+        />
+      </div>
+    );
 
   return (
     <div className="bg-[#7077A1] border-2 border-black p-4 sm:p-6 shadow-md text-white">
@@ -61,57 +99,29 @@ export default function ProjectCard({
         </div>
       </div>
 
-            {/* BODY */}
-      <div
-        className={
-          hasMedia
-            ? "mt-3 grid gap-3 md:grid-cols-[minmax(0,1.8fr)_minmax(0,3.2fr)]"
-            : "mt-3"
-        }
-      >
-        {/* Media column: each piece in its own box */}
-        {hasMedia && (
+      {/* BODY */}
+      {layout === "side" && hasMedia ? (
+        // Resume-style: media left, text right
+        <div className="mt-3 grid gap-3 md:grid-cols-[minmax(0,1.3fr)_minmax(0,3.2fr)]">
           <div className="flex flex-col gap-3">
-            {hasImage && (
-              <div className="rounded-md bg-black/25 p-2 ring-1 ring-black/60 flex justify-center">
-                <img
-                  src={imageSrc}
-                  alt={imageAlt}
-                  className="max-h-64 max-w-full w-auto object-contain rounded"
-                />
-              </div>
-            )}
-
-            {hasVideo && (
-              <div className="rounded-md bg-black/25 p-2 ring-1 ring-black/60 flex justify-center">
-                <video
-                  src={videoSrc}
-                  controls
-                  className="max-h-64 max-w-full w-auto object-contain rounded"
-                />
-              </div>
-            )}
+            {imageBlock}
+            {videoBlock}
           </div>
-        )}
+          {textPanel}
+        </div>
+      ) : (
+        // Default: text top, media row (side-by-side) at bottom
+        <div className="mt-3 space-y-3">
+          {textPanel}
 
-        {/* Text panel – same style as Experience inner blocks */}
-        <div className="rounded-md bg-black/20 p-3 ring-1 ring-black/50 [&_*]:text-[clamp(0.75rem,0.9vw,0.9rem)]">
-          {description && (
-            <p className="mb-2 text-gray-100">
-              {description}
-            </p>
-          )}
-
-          {Array.isArray(bullets) && bullets.length > 0 && (
-            <ul className="list-disc pl-5 space-y-1.5 text-gray-100">
-              {bullets.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+          {hasMedia && (
+            <div className="grid gap-3 md:grid-cols-2">
+              {imageBlock}
+              {videoBlock}
+            </div>
           )}
         </div>
-      </div>
-
+      )}
 
       {/* Tech badges */}
       {techList.length > 0 && (
