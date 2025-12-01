@@ -148,7 +148,7 @@ const PROJECTS = [
     imageSrc: rariRacingImage,
     videoSrc: rariRacingVideo,
     liveLink:
-      "https://stabl.rocks/ShowModulePublish?modulePublishId=1cdf92aa-7e30-4c2f-bcb7-a0c6aaf80b13",
+      "https://stabl.rocks/ShowModulePublish?modulePublishId=0dfd77e3-3e55-45f0-ba74-617d34fd2aeb",
     repoLink: "https://github.com/whabinski/rariRacing",
   },
 
