@@ -1,14 +1,12 @@
+// CourseAccordion.jsx
+// -------------------
+// Expandable panel used on the Key Courses page.
+// Colour coded by category (Computer Science, Business, Math) and lets users toggle course details.
+
 import { useState } from "react";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 
-/**
- * CourseAccordion
- * Props:
- *  - title: string
- *  - category: 'cs' | 'business' | 'math'
- *  - defaultOpen?: boolean
- *  - children?: ReactNode (course description / bullets)
- */
+// Per category Tailwind class presets for the header bar and body panel
 const styles = {
   cs: {
     bar: "bg-[#7077A1]",            // blue
@@ -33,7 +31,10 @@ export default function CourseAccordion({
   defaultOpen = false,
   children,
 }) {
+  // Whether this accordion is currently expanded or collapsed
   const [open, setOpen] = useState(defaultOpen);
+
+  // Get styles for the specified category, default to CS
   const s = styles[category] ?? styles.cs;
 
   return (
@@ -42,10 +43,12 @@ export default function CourseAccordion({
       <div
         className={`grid grid-cols-[minmax(0,1fr)_auto] items-center ${s.bar} ${s.text} px-4 py-2 select-none`}
       >
+        {/* Course title text, truncated if too long */}
         <div className="truncate text-[clamp(0.1rem,3vw,0.8rem)] sm:text-[clamp(1rem,1vw,1rem)]">
           {title}
         </div>
 
+        {/* Toggle button for expanding / collapsing the body */}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -61,6 +64,7 @@ export default function CourseAccordion({
             {open ? "Hide" : "Show"}
           </span>
 
+          {/* Icon indicating expanded/collapsed state */}
           {open ? <HiChevronUp /> : <HiChevronDown />}
         </button>
       </div>

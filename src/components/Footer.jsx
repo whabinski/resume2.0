@@ -1,7 +1,12 @@
+// Footer.jsx
+// -----------
+// Fixed footer showing copyright, social links, and a resume download button.
+
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import resumePDF from "../assets/Wyatt_Habinski_Resume.pdf";
 
 export default function Footer() {
+  // Current year for copyright
   const year = new Date().getFullYear();
 
   return (
@@ -17,12 +22,12 @@ export default function Footer() {
             leading-none
           "
         >
-          {/* Copyright (no wrap) */}
+          {/* Left: copyright text */}
           <p className="text-[#F6B17A] whitespace-nowrap shrink-0">
             © {year} Wyatt Habinski
           </p>
 
-          {/* Icons – smaller on tiny screens, scale up on sm+ */}
+          {/* LinkedIn icon/link */}
           <a
             href="https://linkedin.com/in/wyatt-habinski"
             target="_blank"
@@ -33,6 +38,7 @@ export default function Footer() {
             <FaLinkedin className="align-middle text-[1.6em] sm:text-[2.5em]" />
           </a>
 
+          {/* GitHub icon/link */}
           <a
             href="https://github.com/whabinski"
             target="_blank"
@@ -43,7 +49,7 @@ export default function Footer() {
             <FaGithub className="align-middle text-[1.6em] sm:text-[2.5em]" />
           </a>
 
-          {/* Button */}
+           {/* Resume download button */}
           <a
             href={resumePDF}
             download="Wyatt Habinski - Resume.pdf"
@@ -58,7 +64,7 @@ export default function Footer() {
             "
             title="Download My Resume"
           >
-            {/* Short label on small screens, full label on sm+ */}
+            {/* Short label on small screens, full label on larger screens */}
             <span className="sm:hidden">Resume</span>
             <span className="hidden sm:inline">Download My Resume</span>
           </a>

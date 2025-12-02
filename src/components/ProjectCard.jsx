@@ -1,4 +1,10 @@
-// src/components/ProjectCard.jsx
+// ProjectCard.jsx
+// ----------------
+// Reusable card component for showcasing a single project on the Projects page.
+// Supports two layouts: 
+// "bottom" (text on top, media row below) and
+// "side" (media column on the left, text panel on the right).
+
 import Badge from "./Badge";
 
 export default function ProjectCard({
@@ -13,15 +19,17 @@ export default function ProjectCard({
   liveLink,
   liveLabel = "Live Site",
   repoLink,
-  // NEW: choose layout; "bottom" = original; "side" = media left, text right
   layout = "bottom",
 }) {
+  // Flags to track whether there is image/video media to display
   const hasImage = Boolean(imageSrc);
   const hasVideo = Boolean(videoSrc);
   const hasMedia = hasImage || hasVideo;
 
+  // Normalize tech list into a flat array (handles string or array input)
   const techList = Array.isArray(tech) ? tech : tech ? [tech] : [];
 
+  // Shared text panel: description and bullet list
   const textPanel = (
     <div className="rounded-md bg-black/20 p-3 ring-1 ring-black/50 [&_*]:text-[clamp(0.75rem,0.9vw,0.9rem)]">
       {description && <p className="mb-2 text-gray-100">{description}</p>}
@@ -36,6 +44,7 @@ export default function ProjectCard({
     </div>
   );
 
+  // Optional image block
   const imageBlock =
     hasImage && (
       <div className="rounded-md bg-black/25 p-2 ring-1 ring-black/60 flex justify-center">
@@ -47,6 +56,7 @@ export default function ProjectCard({
       </div>
     );
 
+  // Optional video block
   const videoBlock =
     hasVideo && (
       <div className="rounded-md bg-black/25 p-2 ring-1 ring-black/60 flex justify-center">
@@ -60,7 +70,7 @@ export default function ProjectCard({
 
   return (
     <div className="bg-[#7077A1] border-2 border-black p-4 sm:p-6 shadow-md text-white">
-      {/* HEADER */}
+      {/* Card header: title, context, and external links */}
       <div className="grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,2fr)_auto] items-center gap-2">
         {/* Title */}
         <div className="text-[clamp(0.8rem,1.6vw,1.2rem)] font-extrabold text-[#F6B17A]">
@@ -101,7 +111,7 @@ export default function ProjectCard({
 
       {/* BODY */}
       {layout === "side" && hasMedia ? (
-        // Resume-style: media left, text right
+        // Side layout: media column (image/video) on the left, text panel on the right
         <div className="mt-3 grid gap-3 md:grid-cols-[minmax(0,1.3fr)_minmax(0,3.2fr)]">
           <div className="flex flex-col gap-3">
             {imageBlock}
@@ -110,7 +120,7 @@ export default function ProjectCard({
           {textPanel}
         </div>
       ) : (
-        // Default: text top, media row (side-by-side) at bottom
+        // Default layout: text panel on top, media row (image/video side by side) below
         <div className="mt-3 space-y-3">
           {textPanel}
 

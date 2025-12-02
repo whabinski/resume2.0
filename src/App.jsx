@@ -1,3 +1,9 @@
+// App.jsx
+// ----------
+// Root of the React app. Sets up all top level routes using a router.
+// Each route is rendered inside the shared layout component so the header,
+// footer, and overall pages stay consistent across sections.
+
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Profile from "./pages/Profile";

@@ -1,7 +1,13 @@
-// src/components/SkillBox.jsx
-export default function SkillBox({ title, subtitle, type = "technical" }) {
-  const isSoft = type === "soft";
+// SkillBox.jsx
+// -------------
+// Small reusable card component for displaying a single skill.
+// Supports two visual styles: "technical" and "soft" skills.
 
+export default function SkillBox({ title, subtitle, type = "technical" }) {
+  // Decide if this box is a soft skill (changes layout and styling)
+  const isSoft = type === "soft"; 
+
+   // Pick background and text colours based on skill type
   const palette = isSoft
     ? "bg-[#7077A1] text-white border-black" 
     : "bg-[#424769] text-white border-black"; 

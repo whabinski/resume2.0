@@ -1,6 +1,10 @@
-// src/pages/Skills.jsx
+// Skills.jsx
+// ----------
+// Skills page displaying technical and soft skills as
+// a responsive collection of SkillBox components
+
 import puzzle from "../assets/puzzle.jpeg";
-import SkillBox from "../components/SkillBox";
+import SkillBox from "../components/SkillBox"; // SkillBox component for individual skill display
 
 export default function Skills() {
   return (
@@ -13,7 +17,6 @@ export default function Skills() {
 
       {/* Content */}
       <section className="mx-auto max-w-6xl px-4 md:min-h-[calc(100svh-18rem)] md:flex md:flex-col md:justify-center py-8 md:py-0">
-        {/* WRAP instead of GRID */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
           <SkillBox title="Front End Development" subtitle="HTML, CSS, JS, Vue, React, Telerik" type="technical" />
           <SkillBox title="Back end development" subtitle="ASP.NET Framework, Python, C, C++, C#, Java, Haskell, Elm, Prolog" type="technical" />

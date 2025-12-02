@@ -1,10 +1,16 @@
+// KeyCourses.jsx
+// ---------------
+// Courses page that lists selected Computer Science, Business, and Math courses.
+// Has color coded drop down "accordions" which display course descriptions 
+// (CS = blue, Business = orange, Math = green).
+
 import books from "../assets/books.jpeg";
-import CourseAccordion from "../components/CourseAccordion";
+import CourseAccordion from "../components/CourseAccordion"; // CourseAccordion component for collapsible course descriptions
 
 export default function KeyCourses() {
   return (
     <div className="relative">
-      {/* Full-bleed background */}
+      {/* Background */}
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${books})` }}

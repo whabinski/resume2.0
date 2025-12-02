@@ -1,12 +1,18 @@
+// Profile.jsx
+// -----------
+// Landing/profile page of the site
+// Includes about section with headshot, and a contact section, all using the
+// shared SideBySideSection layout component for consistent image/text pairing.
+
 import city from "../assets/city.jpeg";
 import profilePic from "../assets/profilePic.jpeg";
 import ringo from "../assets/ringo.jpeg";
-import SideBySideSection from "../components/SideBySideSection";
+import SideBySideSection from "../components/SideBySideSection";  //SidebySide layout component
 
 export default function Profile() {
   return (
     <div className="relative">
-      {/* Full background */}
+      {/* Background image*/}
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${city})` }}
@@ -34,7 +40,7 @@ export default function Profile() {
           </p>
         </SideBySideSection>
 
-        {/* Contact + Dog (reverse order) */}
+        {/* Contact + Photo */}
         <SideBySideSection imgSrc={ringo} imgAlt="Sunset with dog" reverse imgW={420} imgH={280}>
           <h2 className="text-2xl font-bold">Contact Me!</h2>
           <div className="mt-4 space-y-2 text-sm text-gray-200">

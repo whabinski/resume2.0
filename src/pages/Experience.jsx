@@ -1,5 +1,13 @@
+// Experience.jsx
+// ---------------
+// Experience page that shows professional roles inside JobAccordion components.
+// Three separate accordions to describe work at HomeEquity Bank, 
+// Building Science Investigations, and Data Annotation.
+// Including tech stacks and detailed bullet points for each position.
+
 import desk from "../assets/desk.jpeg";
-import JobAccordion from "../components/JobAccordion";
+import timeTrackingImg from "../assets/timetracking.jpeg";
+import JobAccordion from "../components/JobAccordion"; // JobAccordion component for collapsible job descriptions
 
 export default function Experience() {
   return (
@@ -67,8 +75,7 @@ export default function Experience() {
                 Ensured testing across environments and deployed via Azure DevOps; managed change requests.
               </li>
             </ul>
-            {/* Optional image */}
-            {/* <img src={timeTrackingImg} alt="Time tracking UI" className="mt-3 rounded ring-1 ring-black/40" /> */}
+            { <img src={timeTrackingImg} alt="Time tracking UI" className="mt-3 rounded ring-1 ring-black/40" /> }
           </div>
 
           {/* 2024 */}
@@ -172,10 +179,6 @@ export default function Experience() {
             </ul>
           </div>
         </JobAccordion>
-
-
-
-
       </div>
     </div>
   );

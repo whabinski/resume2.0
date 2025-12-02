@@ -1,18 +1,25 @@
+// Header.jsx
+// ----------
+// Site wide header with name, subtitle, and navigation links.
+// Responsive layout: mobile uses a hamburger menu, desktop shows a full nav bar.
+
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 
-const link = ({ isActive }) =>
-  "font-semibold transition-colors whitespace-nowrap " +
-  (isActive ? "text-white" : "text-[#F6B17A] hover:text-[#f3c88f]");
-
 export default function Header() {
+  // Track whether the mobile menu is open or closed
   const [open, setOpen] = useState(false);
+
+  // Helper to style page name based on whether the route is active
+  const link = ({ isActive }) =>
+    "font-semibold transition-colors whitespace-nowrap " +
+    (isActive ? "text-white" : "text-[#F6B17A] hover:text-[#f3c88f]");
 
   return (
     <header className="bg-[#2D3250] text-white border-b-4 border-[#7077A1]">
       <div className="mx-auto max-w-6xl px-4 sm:px-10">
-        {/* Mobile layout (<640px) */}
+        {/* Mobile layout */}
         <div className="sm:hidden py-6">
           <div className="flex items-center justify-between">
             {/* Left: name + subtitle */}
@@ -25,7 +32,7 @@ export default function Header() {
               </p>
             </div>
 
-            {/* Right: hamburger */}
+            {/* Right: hamburger menu*/}
             <button
               type="button"
               aria-label="Toggle menu"
@@ -54,7 +61,7 @@ export default function Header() {
           )}
         </div>
 
-        {/* Desktop layout (≥640px) */}
+        {/* Desktop layout */}
         <div className="hidden sm:grid grid-cols-2 h-28">
           {/* Left: name + subtitle */}
           <div className="justify-self-start h-full flex flex-col justify-center">

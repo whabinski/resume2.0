@@ -1,17 +1,22 @@
+// Education.jsx
+// --------------
+// Education page that highlights Edcucation.
+// Uses a SideBySideSection component to show image alongside academic details 
+
 import mcmaster from "../assets/mcmaster.jpeg";
 import university from "../assets/university.jpeg";
-import SideBySideSection from "../components/SideBySideSection";
+import SideBySideSection from "../components/SideBySideSection"; // SideBySide layout component
 
 export default function Education() {
   return (
     <div className="relative">
-      {/* Full background */}
+      {/* Background */}
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${university})` }}
       />
 
-      {/* Wrapper that vertically centers content */}
+      {/* Content */}
       <section className="mx-auto max-w-6xl px-4 min-h-[calc(100vh-16rem)] flex items-center justify-center">
         <SideBySideSection
           imgSrc={mcmaster}

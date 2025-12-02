@@ -1,18 +1,7 @@
-// src/components/SideBySideSection.jsx
-function cx(...parts) {
-  return parts.filter(Boolean).join(" ");
-}
+// SideBySideSection.jsx
+// ---------------------
+// Reusable layout component for sections that show an image beside text content.
 
-/**
- * SideBySideSection
- * Props:
- *  - imgSrc, imgAlt
- *  - reverse (boolean): puts image on the right
- *  - imgW, imgH: numbers (px) for the image box (defaults 280x280)
- *  - matchHeights (boolean): makes the text card at least as tall as the image card
- *  - className, imgClassName, contentClassName: style overrides
- *  - children: content inside the text card
- */
 export default function SideBySideSection({
   imgSrc,
   imgAlt = "",
@@ -25,8 +14,9 @@ export default function SideBySideSection({
   contentClassName = "",
   children,
 }) {
-  // If we’re matching heights, account for the image card padding (p-2 = 16px total vertical)
-  const minTextHeight = matchHeights ? imgH + 16 : undefined;
+
+  const cx = (...parts) => parts.filter(Boolean).join(" ");   // Utility to join className pieces, ignoring any falsey values
+  const minTextHeight = matchHeights ? imgH + 16 : undefined;  // Optional min-height so the text block roughly matches the image card height
 
   return (
     <div
@@ -36,7 +26,7 @@ export default function SideBySideSection({
         className
       )}
     >
-      {/* IMAGE */}
+      {/* Image container */}
       <div
         className={cx(
           "justify-self-center md:justify-self-start",
@@ -60,7 +50,7 @@ export default function SideBySideSection({
         </div>
       </div>
 
-      {/* TEXT */}
+      {/* Text container */}
       <div
         className={cx(
           "bg-[#424769] text-gray-100 p-6 border-2 border-black shadow-2xl",

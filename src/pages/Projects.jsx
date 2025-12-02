@@ -1,5 +1,9 @@
-// src/sections/ProjectsSection.jsx
-import ProjectCard from "../components/ProjectCard";
+// Projects.jsx
+// -------------------
+// Projects page that showcases highlighted work 
+// (DoodleAI, Beatify, DieSpy,Resume site, and Rari Racing).
+
+import ProjectCard from "../components/ProjectCard"; // ProjectCard component for individual project display
 import projectBackground from "../assets/project.jpeg";
 
 import doodleImage from "../assets/doodleAI_desktop.jpeg";
@@ -16,6 +20,8 @@ import resumeImage from "../assets/resume_mobile.jpeg";
 import rariRacingImage from "../assets/rariRacing.jpeg";
 import rariRacingVideo from "../assets/rariRacing_preview.mp4";
 
+// Central project configuration array. Each object describes one project and
+// is spread into a ProjectCard. This keeps content and layout logic separate.
 const PROJECTS = [
   // 1. DoodleAI
   {
@@ -157,13 +163,13 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <div className="relative">
-      {/* Full background */}
+      {/* Background */}
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${projectBackground})` }}
       />
 
-      {/* Content container */}
+      {/* Content Container */}
       <section id="projects" className="mx-auto max-w-6xl px-4">
         <div className="space-y-5">
           {PROJECTS.map((project) => (

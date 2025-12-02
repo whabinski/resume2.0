@@ -1,6 +1,8 @@
+/*Tailwind CSS layer directives*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Global body styles: set font, background, and text color */
 :root { --bg: #ffffff; --fg: #0f172a; }
 body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--fg); }
