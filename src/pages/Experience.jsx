@@ -23,7 +23,7 @@ export default function Experience() {
         {/* ===== Job 1 ===== */}
         <JobAccordion
           company="HomeEquity Bank"
-          role="Programming Analyst"
+          role="Programming Analyst Intern"
           roleNote="Toronto, ON"
           defaultOpen={false}
           tech={[
