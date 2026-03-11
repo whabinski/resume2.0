@@ -24,7 +24,7 @@ export default function Skills() {
           <SkillBox title="Mobile Development" subtitle="Swift, Kotlin, Unity" type="technical" />
           <SkillBox title="RESTful APIs" subtitle="Swagger, Entity Frameworks" type="technical" />
           <SkillBox title="Tools & Methodologies" subtitle="Azure DevOps, CI/CD, Visual Studio, Agile, Scrum, Waterfall" type="technical" />
-          <SkillBox title="Cloud Computing" subtitle="SaaS, Salesforce Development, Apex" type="technical" />
+          <SkillBox title="Cloud Computing" subtitle="Firebase, Salesforce Development, Apex" type="technical" />
           <SkillBox title="Data Analysis" subtitle="Power BI, Excel" type="technical" />
           <SkillBox title="Machine Learning" subtitle="TensorFlow, PyTorch, scikit-learn" type="technical" />
           <SkillBox title="Data Science Tools" subtitle="Pandas, NumPy, openpyxl" type="technical" />
@@ -37,11 +37,11 @@ export default function Skills() {
           <SkillBox title="Creativity & Innovation" type="soft" />
           <SkillBox title="Organizational Skills" type="soft" />
           <SkillBox title="Collaboration & Teamwork" type="soft" />
-          <SkillBox title="Time Management" type="soft" />
+          <SkillBox title="Reliability" type="soft" />
           <SkillBox title="Adaptability" type="soft" />
           <SkillBox title="Research & Inquiry" type="soft" />
           <SkillBox title="Continuous Learning" type="soft" />
-          <SkillBox title="Learning Ability" type="soft" />
+          <SkillBox title="Customer Advocacy" type="soft" />
 
         </div>
       </section>
