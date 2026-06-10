@@ -5,8 +5,9 @@
 // shared SideBySideSection layout component for consistent image/text pairing.
 
 import city from "../assets/city.jpeg";
+import moshers from "../assets/moshers.jpeg";
 import profilePic from "../assets/profilePic.jpeg";
-import ringo from "../assets/ringo.jpeg";
+import ringo from "../assets/ringo_dock.jpeg";
 import SideBySideSection from "../components/SideBySideSection";  //SidebySide layout component
 
 export default function Profile() {
@@ -15,7 +16,7 @@ export default function Profile() {
       {/* Background image*/}
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${city})` }}
+        style={{ backgroundImage: `url(${moshers})` }}
       />
 
       {/* Content container */}
@@ -29,10 +30,11 @@ export default function Profile() {
         {/* Headshot + About */}
         <SideBySideSection imgSrc={profilePic} imgAlt="Wyatt Habinski">
           <p className="text-sm leading-6">
-            Experienced in designing, developing, testing, and deploying scalable applications, 
-            with hands on exposure to AI and automation tools. Proficient across multiple programming 
-            paradigms and diverse languages. Skilled in collaborating within dynamic teams to deliver
-            innovative, high-quality solutions, and committed to driving measurable business impact.
+            Experienced software developer seeking full time opportunities in software and AI development,
+            currently advancing my academic foundation through a M.S. in Artificial Intelligence at the University
+            of Texas at Austin. Skilled in designing, developing, and deploying scalable applications with
+            hands on exposure to AI and automation tools.
+
           </p>
           <p className="mt-4 text-sm leading-6">
             I approach challenges with a strong desire to deliver high quality work, and
@@ -41,7 +43,7 @@ export default function Profile() {
         </SideBySideSection>
 
         {/* Contact + Photo */}
-        <SideBySideSection imgSrc={ringo} imgAlt="Sunset with dog" reverse imgW={420} imgH={280}>
+        <SideBySideSection imgSrc={ringo} imgAlt="Sunset with dog" reverse imgW={275} imgH={200}>
           <h2 className="text-2xl font-bold">Contact Me!</h2>
           <div className="mt-4 space-y-2 text-sm text-gray-200">
             <p>
