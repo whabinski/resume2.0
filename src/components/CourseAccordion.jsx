@@ -48,8 +48,8 @@ export default function CourseAccordion({
       <div
         className={`grid grid-cols-[minmax(0,1fr)_auto] items-center ${s.bar} ${s.text} px-4 py-2 select-none`}
       >
-        {/* Course title text, truncated if too long */}
-        <div className="truncate text-[clamp(0.1rem,3vw,0.8rem)] sm:text-[clamp(1rem,1vw,1rem)]">
+        {/* Course title text, truncated if too long while closed and wrapped while open */}
+        <div className={`${open ? "" : "truncate"} text-[clamp(0.1rem,3vw,0.8rem)] sm:text-[clamp(1rem,1vw,1rem)]`}>
           {title}
         </div>
 
