@@ -55,8 +55,8 @@ export default function Header() {
               <NavLink to="/experience" className={link} onClick={() => setOpen(false)}>Experience</NavLink>
               <NavLink to="/projects" className={link} onClick={() => setOpen(false)}>Projects</NavLink>
               <NavLink to="/education" className={link} onClick={() => setOpen(false)}>Education</NavLink>
-              <NavLink to="/courses" className={link} onClick={() => setOpen(false)}>Key Courses</NavLink>
-              <NavLink to="/skills" className={link} onClick={() => setOpen(false)}>Relevant Skills</NavLink>
+              <NavLink to="/courses" className={link} onClick={() => setOpen(false)}>Courses</NavLink>
+              <NavLink to="/skills" className={link} onClick={() => setOpen(false)}>Skills</NavLink>
             </nav>
           )}
         </div>
@@ -83,8 +83,8 @@ export default function Header() {
             <NavLink to="/experience" className={link}>Experience</NavLink>
             <NavLink to="/projects" className={link}>Projects</NavLink>
             <NavLink to="/education" className={link}>Education</NavLink>
-            <NavLink to="/courses" className={link}>Key Courses</NavLink>
-            <NavLink to="/skills" className={link}>Relevant Skills</NavLink>
+            <NavLink to="/courses" className={link}>Courses</NavLink>
+            <NavLink to="/skills" className={link}>Skills</NavLink>
           </nav>
         </div>
       </div>

@@ -1,8 +1,8 @@
 // KeyCourses.jsx
 // ---------------
-// Courses page that lists selected Computer Science, Business, and Math courses.
-// Has color coded drop down "accordions" which display course descriptions 
-// (CS = blue, Business = orange, Math = green).
+// Courses page that lists selected Artificial Intelligence, Computer Science, Business, and Math courses.
+// Has color coded drop down "accordions" which display course descriptions
+// (AI = red, CS = blue, Business = orange, Math = green).
 
 import books from "../assets/books.jpeg";
 import CourseAccordion from "../components/CourseAccordion"; // CourseAccordion component for collapsible course descriptions
@@ -19,7 +19,11 @@ export default function KeyCourses() {
         <section className="mx-auto max-w-6xl px-4 pt-4 pb-8 space-y-4">
         {/* Legend */}
         <div className="mx-auto w-fit bg-black/60 text-white rounded-md px-4 py-2">
-          <ul className="flex gap-2 sm:gap-6 text-[clamp(0.1rem,3vw,0.8rem)] sm:text-[clamp(1rem,1vw,1rem)]">
+          <ul className="flex flex-wrap justify-center gap-2 sm:gap-6 text-[clamp(0.1rem,3vw,0.8rem)] sm:text-[clamp(1rem,1vw,1rem)]">
+            <li className="flex items-center gap-2">
+              <span className="h-4 w-4 rounded bg-[#C94F4F] border border-black/40" />
+              Artificial Intelligence
+            </li>
             <li className="flex items-center gap-2">
               <span className="h-4 w-4 rounded bg-[#7077A1] border border-black/40" />
               Computer Science
@@ -35,14 +39,52 @@ export default function KeyCourses() {
           </ul>
         </div>
 
-        {/* Computer Science (blue) */}
-        <CourseAccordion category="cs" title="Applications of Machine Learning">
+        {/* Artificial Intelligence (red) */}
+
+        <CourseAccordion category="ai" title="Machine Learning">
+          <p>
+            Fundamentals of computational and statistical learning theory, covering mathematical and applied aspects of machine
+            learning: mistake-bounded learning, decision trees, PAC learning, cross validation; perceptron, linear and logistic
+            regression, gradient descent, boosting; PCA, SVD; maximum likelihood estimation, Bayesian inference; k-means, Gaussian
+            mixture models, EM, multivariate normal, graphical models; kernel methods, neural networks.
+          </p>
+        </CourseAccordion>
+
+        <CourseAccordion category="ai" title="Applications of Machine Learning">
           <p>
             Overview of data engineering; human-computation architectures; supervised approaches (neural networks);
             unsupervised approaches (clustering/topic modelling); human-in-the-loop approaches (reinforcement learning).
           </p>
         </CourseAccordion>
 
+        <CourseAccordion category="ai" title="Data-Driven Algorithms for Sequential Decision Making">
+          <p>
+            Problems and algorithmic solutions in sequential decision making based on data, as appear in many applications including
+            online ad-placement, A/B testing for software services, financial portfolio management, medical trials, and more.
+            Topics include best-arm identification, multi-armed bandit problems and solutions, online learning,
+            prediction with expert advice, and optimal stopping problems.
+          </p>
+        </CourseAccordion>
+
+        <CourseAccordion category="ai" title="Ethics in AI">
+          <p>
+            History of ethics and of AI; contemporary, global ethical theories and their application to AI; societal and technical
+            dimensions of AI ethics, including fairness, accountability, transparency, power, and agency; identifying ethically
+            significant design decisions and principles for the responsible development and deployment of AI systems.
+          </p>
+        </CourseAccordion>
+
+        <CourseAccordion category="ai" title="Planning, Search, and Reasoning Under Uncertainty">
+          <p>
+            Foundational AI problems of planning, search, and reasoning under uncertainty: planning domains and representations of
+            world states and actions; symbolic, search-based, sampling-based, and adversarial planning; decision-making processes for
+            autonomous systems; reasoning about sensing, actuation, and model uncertainty; how modern machine learning builds on
+            and complements classical approaches.
+          </p>
+        </CourseAccordion>
+
+
+        {/* Computer Science (blue) */}
         <CourseAccordion category="cs" title="Data Mining">
           <p>
             Core techniques in big data analytics (knowledge discovery, data mining). Basic concepts of frequent patterns, 
@@ -102,15 +144,6 @@ export default function KeyCourses() {
           <p>
             Computability models; Church–Turing thesis; complexity classes; P vs NP; NP-completeness and reduction techniques;
             algorithmic strategies; flows; distributed algorithms; advanced techniques such as randomization.
-          </p>
-        </CourseAccordion>
-
-        <CourseAccordion category="cs" title="Data-Driven Algorithms for Sequential Decision Making">
-          <p>
-            Problems and algorithmic solutions in sequential decision making based on data, as appear in many applications including 
-            online ad-placement, A/B testing for software services, financial portfolio management, medical trials, and more. 
-            Topics include best-arm identification, multi-armed bandit problems and solutions, online learning, 
-            prediction with expert advice, and optimal stopping problems.
           </p>
         </CourseAccordion>
 

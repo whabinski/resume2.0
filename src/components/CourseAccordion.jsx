@@ -1,13 +1,18 @@
 // CourseAccordion.jsx
 // -------------------
 // Expandable panel used on the Key Courses page.
-// Colour coded by category (Computer Science, Business, Math) and lets users toggle course details.
+// Colour coded by category (Artificial Intelligence, Computer Science, Business, Math) and lets users toggle course details.
 
 import { useState } from "react";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 
 // Per category Tailwind class presets for the header bar and body panel
 const styles = {
+  ai: {
+    bar: "bg-[#C94F4F]",            // red
+    text: "text-white",
+    panel: "bg-[#C94F4F]",
+  },
   cs: {
     bar: "bg-[#7077A1]",            // blue
     text: "text-white",
