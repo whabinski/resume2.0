@@ -5,19 +5,12 @@
 // Building Science Investigations, and Data Annotation.
 // Including tech stacks and detailed bullet points for each position.
 
-import desk from "../assets/desk.jpeg";
 import timeTrackingImg from "../assets/timetracking.jpeg";
 import JobAccordion from "../components/JobAccordion"; // JobAccordion component for collapsible job descriptions
 
 export default function Experience() {
   return (
     <div className="relative">
-      {/* Background */}
-      <div
-        className="fixed inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${desk})` }}
-      />
-
       {/* Page content */}
       <div className="mx-auto max-w-6xl px-4 py-8 md:py-0 min-h-0 md:min-h-[calc(100svh-18rem)] flex flex-col gap-6 md:justify-center">
         {/* ===== Job 1 ===== */}

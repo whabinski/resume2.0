@@ -5,18 +5,11 @@
 
 import mcmaster from "../assets/mcmaster.jpeg";
 import texas from "../assets/texas.jpeg";
-import university from "../assets/university.jpeg";
 import SideBySideSection from "../components/SideBySideSection"; // SideBySide layout component
 
 export default function Education() {
   return (
     <div className="relative">
-      {/* Background */}
-      <div
-        className="fixed inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${university})` }}
-      />
-
       {/* Content */}
       <section className="mx-auto max-w-6xl px-4 py-12 flex flex-col gap-10">
         <SideBySideSection

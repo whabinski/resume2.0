@@ -3,18 +3,11 @@
 // Skills page displaying technical skills as
 // a jigsaw style mosaic of SkillBox components
 
-import puzzle from "../assets/puzzle.jpeg";
 import SkillBox from "../components/SkillBox"; // SkillBox component for individual skill display
 
 export default function Skills() {
   return (
     <div className="relative">
-      {/* Background */}
-      <div
-        className="fixed inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${puzzle})` }}
-      />
-
       {/* Content */}
       <section className="mx-auto max-w-6xl px-4 md:min-h-[calc(100svh-18rem)] md:flex md:flex-col md:justify-center py-8 md:py-4">
         {/* Each piece is placed by hand so the mosaic has no holes: 6 columns on small screens, 12 on large.

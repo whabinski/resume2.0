@@ -6,3 +6,6 @@
 /* Global body styles: set font, background, and text color */
 :root { --bg: #ffffff; --fg: #0f172a; }
 body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+
+/* Lock the page itself so only the main content area in Layout scrolls */
+html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }

@@ -4,18 +4,11 @@
 // Has color coded drop down "accordions" which display course descriptions
 // (AI = red, CS = blue, Business = orange, Math = green).
 
-import books from "../assets/books.jpeg";
 import CourseAccordion from "../components/CourseAccordion"; // CourseAccordion component for collapsible course descriptions
 
 export default function KeyCourses() {
   return (
     <div className="relative">
-      {/* Background */}
-      <div
-        className="fixed inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${books})` }}
-      />
-
         <section className="mx-auto max-w-6xl px-4 pt-4 pb-8 space-y-4">
         {/* Legend */}
         <div className="mx-auto w-fit bg-black/60 text-white rounded-md px-4 py-2">

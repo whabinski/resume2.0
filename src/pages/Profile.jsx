@@ -5,7 +5,6 @@
 // shared SideBySideSection layout component for consistent image/text pairing.
 
 import city from "../assets/city.jpeg";
-import moshers from "../assets/moshers.jpeg";
 import profilePic from "../assets/profilePic.jpeg";
 import ringo from "../assets/ringo_dock.jpeg";
 import SideBySideSection from "../components/SideBySideSection";  //SidebySide layout component
@@ -13,12 +12,6 @@ import SideBySideSection from "../components/SideBySideSection";  //SidebySide l
 export default function Profile() {
   return (
     <div className="relative">
-      {/* Background image*/}
-      <div
-        className="fixed inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${moshers})` }}
-      />
-
       {/* Content container */}
       <section
         className="

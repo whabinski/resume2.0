@@ -4,7 +4,6 @@
 // (DoodleAI, Beatify, DieSpy,Resume site, and Rari Racing).
 
 import ProjectCard from "../components/ProjectCard"; // ProjectCard component for individual project display
-import projectBackground from "../assets/project.jpeg";
 
 import doodleImage from "../assets/doodleAI_desktop.jpeg";
 import doodleVideo from "../assets/doodleAI_preview.mp4";
@@ -163,12 +162,6 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <div className="relative">
-      {/* Background */}
-      <div
-        className="fixed inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${projectBackground})` }}
-      />
-
       {/* Content Container */}
       <section id="projects" className="mx-auto max-w-6xl px-4">
         <div className="space-y-5">
